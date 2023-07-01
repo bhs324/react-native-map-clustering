@@ -1,6 +1,8 @@
 import React from "react";
 import MapView from "react-native-map-clustering";
 import { Marker } from "react-native-maps";
+import {StyleSheet, View} from "react-native";
+import {StatusBar} from "expo-status-bar";
 
 function getRandomLatitude(min = 48, max = 56) {
   return Math.random() * (max - min) + min;
@@ -42,5 +44,14 @@ const App = () => {
     </MapView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default App;
